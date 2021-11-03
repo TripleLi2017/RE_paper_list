@@ -1,12 +1,10 @@
-# RE_paper_list
-
 #### 关系抽取论文list
 
 #### 数据集： 
 
-1.ACE
+1. ACE
 
- 2.semeval
+2. semeval
 
  	3. tacred
  	4. [DocRED](https://github.com/thunlp/DocRED)
@@ -16,37 +14,36 @@
 
 #### 具体论文f1值：
 
-|                                                          |       |         |        | 远程监督 | 文档级别 | fewshot    |
-| -------------------------------------------------------- | ----- | ------- | ------ | -------- | -------- | ---------- |
-|                                                          | ACE   | semeval | tacred | NYT      | DocRED   | FewRel     |
-| RNN_2015                                                 |       | 79.6    |        |          |          |            |
-| CNN-PE                                                   |       |         | 61.2   |          |          |            |
-| SDP-LSTM                                                 |       | 83.7    | 58.7   |          |          |            |
-| att_lstm_2016                                            |       | 84      |        |          |          |            |
-| position_2017                                            |       |         | 66     |          |          |            |
-| C-GCN                                                    |       | 84.8    | 68.2   |          |          |            |
-| AGGCN                                                    | -     | 85.4    | 68.2   |          | 51.45    |            |
-| Paths to Relation Extraction  through Semantic Structure | -     |         | 68.41  |          |          |            |
-| dynamic                                                  |       | 86.4    | 69.2   |          |          |            |
-| sub-graphs                                               |       | 85.9    | 66.1   |          |          |            |
-| A_GCN                                                    | 79.05 | 89.85   |        |          |          |            |
-| TaMM                                                     | 78.98 | 90.06   |        |          |          |            |
-| three-sentence                                           |       |         |        |          | 56.23    |            |
-| LSR                                                      |       |         |        |          | 59.05    | 54.18glove |
-| GCNN                                                     |       |         |        |          | 51.62    |            |
-| GraphRel                                                 | 57.72 |         |        | 54.9     |          |            |
-| overlap                                                  | 62.02 | 88.96   |        | 56.47    |          |            |
+|                |       |         |        | 远程监督 | 文档级别 | fewshot    |
+| -------------- | ----- | ------- | ------ | -------- | -------- | ---------- |
+|                | ACE   | semeval | tacred | NYT      | DocRED   | FewRel     |
+| RNN_2015       |       | 79.6    |        |          |          |            |
+| CNN-PE         |       |         | 61.2   |          |          |            |
+| SDP-LSTM       |       | 83.7    | 58.7   |          |          |            |
+| att_lstm_2016  |       | 84      |        |          |          |            |
+| position_2017  |       |         | 66     |          |          |            |
+| C-GCN          |       | 84.8    | 68.2   |          |          |            |
+| AGGCN          | -     | 85.4    | 68.2   |          | 51.45    |            |
+| PRE            | -     |         | 68.41  |          |          |            |
+| dynamic        |       | 86.4    | 69.2   |          |          |            |
+| sub-graphs     |       | 85.9    | 66.1   |          |          |            |
+| A_GCN          | 79.05 | 89.85   |        |          |          |            |
+| TaMM           | 78.98 | 90.06   |        |          |          |            |
+| three-sentence |       |         |        |          | 56.23    |            |
+| LSR            |       |         |        |          | 59.05    | 54.18glove |
+| GCNN           |       |         |        |          | 51.62    |            |
+| GraphRel       | 57.72 |         |        | 54.9     |          |            |
+| overlap        | 62.02 | 88.96   |        | 56.47    |          |            |
 
 #### 具体论文
 
 #### 依存类别
 
-基础做法，用工具获取对应的遗存信息，采用一定的修剪策略引入，[1],[2],[3]分别为不同的策略。
+基础做法，用工具获取对应的依存信息，再采用一定的修剪策略，利用神经网络引入，[1],[2],[3]分别为不同的策略。
 
-[1] SDP 最短依存路径：Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths [[论文]](https://arxiv.org/abs/1508.03720)[code]
+[1] SDP 最短依存路径：Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths [[论文]](https://arxiv.org/abs/1508.03720)[代码]
 
-[2] SP-Tree: 最小公共祖先：End-to-end relation extraction using lstms on sequences and tree
-structures [文](chrome-extension://ikhdkkncnoglghljlkmcimlnlhkeamad/pdf-viewer/web/viewer.html?file=https%3A%2F%2Farxiv.org%2Fpdf%2F1601.00770.pdf)[code]
+[2] SP-Tree: 最小公共祖先：End-to-end relation extraction using lstms on sequences and tree structures [论文 ](chrome-extension://ikhdkkncnoglghljlkmcimlnlhkeamad/pdf-viewer/web/viewer.html?file=https%3A%2F%2Farxiv.org%2Fpdf%2F1601.00770.pdf)[代码]
 
 [3]修剪后用GCN 加载依存信息： Graph convolution over pruned dependency trees improves relation extraction [【论文】](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1809.10185.pdf) [【代码】](https://link.zhihu.com/?target=https%3A//github.com/qipeng/gcn-over-pruned-trees)
 
@@ -110,4 +107,3 @@ Dependency-driven Relation Extraction with Attentive Graph Convolutional Network
 
 该模型将关系抽取任务利用神经网络进行建模，利用无监督的词向量以及位置向量作为模型的主要输入特征，一定程度上避免了传统方法中的误差累积。但仍然有 lexical level feature 这个人工构造的特征，且 CNN 中的卷积核大小是固定的，抽取到的特征十分单一.
 
-【3】
