@@ -1,26 +1,12 @@
 #### 关系抽取论文list
 
-#### 数据集： 
+#### 数据集
 
-`
-
-ACE
-
-semeval
-
-tacred
-
-[DocRED](https://github.com/thunlp/DocRED)
-
-NYT
-
-`
-
-
-
-
-
-
+1. ACE
+2. semeval
+3. tacred
+4. [DocRED](https://github.com/thunlp/DocRED)
+5. NYT
 
 #### 具体论文f1值：
 
